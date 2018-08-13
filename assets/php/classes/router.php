@@ -1,5 +1,8 @@
 <?php
 
+require_once(__DIR__ . "/request.php");
+require_once(__DIR__ . "/response.php");
+
 class Router {
 	private $requestURL;
 	private $requestType;
@@ -57,8 +60,11 @@ class Router {
 		if (!$requestParams) return false;
 		// get request body
 		$requestBody = @file_get_contents('php://input');
-		// return parameters and body
-		$array = [$requestParams, $requestBody];
+		// create request and response object
+		$request = new Request($requestParams, $requestBody);
+		$response = new Response();
+		// return both objects
+		$array = [$request, $response];
 		return $array;
 	}
 
