@@ -6,7 +6,7 @@ Implements basic routing for the seven RESTful routes: Index, New, Create, Show,
 
 - Make sure a recent version of PHP is installed (7.2.x)
 - Extract files to folder
-- Start PHP CLI server with the following command
+- Start a PHP CLI webserver with the following command
 ```
 php -S localhost:3000
 ```
