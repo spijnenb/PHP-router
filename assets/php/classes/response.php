@@ -12,7 +12,7 @@ class Response {
 		header("Location: " . $location);
 		exit;
 	}
-	public function render($page) {
+	public function render($page, $data) {
 		// try to find file
 		try {
 			$path = $_SERVER["DOCUMENT_ROOT"] . "/views/" . $page;

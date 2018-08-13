@@ -45,7 +45,7 @@ class Router {
 		exit;
 	}
 
-	public function destroy($url, $callback) {
+	public function delete($url, $callback) {
 		$request = $this->handleRequest("DELETE", $url);
 		if (!$request) return;
 		// callback with request parameters and request body
